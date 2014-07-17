@@ -185,7 +185,6 @@ Hope to see you there!
 					</h3>
 				</div>
 				<div class="panel-body">
-					??????
 				</div>
 				<div class="panel-footer">
 					Mondays at 7PM
@@ -198,7 +197,6 @@ Hope to see you there!
 					</h3>
 				</div>
 				<div class="panel-body">
-					??????
 				</div>
 				<div class="panel-footer">
 				   Wednesdays at 7PM
