@@ -1,20 +1,26 @@
 body {
-  padding-top: 70px;
+	padding-top: 70px;
 }
 
 .responsive-video {
-position: relative;
-padding-bottom: 56.25%;
-padding-top: 60px; overflow: hidden;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 60px;
+	overflow: hidden;
 }
-
 
 .responsive-video iframe,
 .responsive-video object,
 .responsive-video embed {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.footer {
+	text-align: center;
+	padding-bottom: 12px;
+	padding-top: 12px;
 }
