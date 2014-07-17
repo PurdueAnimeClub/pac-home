@@ -13,6 +13,9 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="assets/bootstrap/css/flatly.min.css" rel="stylesheet">
+	
+	<!-- Bootstrap Switch -->
+	<link href="assets/bootstrap/switch/css/bootstrap-switch.min.css" rel="stylesheet">
 
 	<!-- Custom CSS -->
 	<link href="assets/css/custom.css" rel="stylesheet">
@@ -42,14 +45,13 @@
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#pac">PAC</a></li>
-			<li><a href="#classic">PAC Classic</a></li>
-			<li><a href="#27">PAC 27+</a></li>
-			<li><a href="#cosplay">Cosplay</a></li>
-			<li><a href="#forum">Forum</a></li>
-			<li><a href="#contact">Contact</a></li>
-			<li><a href="#">Switch Theme</a></li>
+			<li><a href="./">Home</a></li>
+			<li><a href="./?page=pac">PAC</a></li>
+			<li><a href="./?page=classic">PAC Classic</a></li>
+			<li><a href="./?page=27">PAC 27+</a></li>
+			<li><a href="./?page=cosplay">Cosplay</a></li>
+			<li><a href="./?page=forum">Forum</a></li>
+			<li><a href="./?page=contact">Contact</a></li>
 		  </ul>
 		</div>
 	  </div>
@@ -77,7 +79,7 @@
 					<p>
 						Hope to see you there!
 					</p>
-					<a href="#news"><small>Previous announcements</small></a>
+					<a href="./?page=news"><small>Previous announcements</small></a>
 				</div>
 				
 				<!-- PAC Theater -->
@@ -106,7 +108,7 @@
 										held in Stewart Center.
 									</p>
 									<p>
-										<a class="btn btn-primary" href="#pac">Details</a>
+										<a class="btn btn-primary" href="./?page=pac">Details</a>
 									</p>
 								</div>
 							</div>
@@ -124,7 +126,7 @@
 										rewatching your favorite old shows, this is the place to be.
 									</p>
 									<p>
-										<a class="btn btn-primary" href="#classic">Details</a>
+										<a class="btn btn-primary" href="./?page=classic">Details</a>
 									</p>
 								</div>
 							</div>
@@ -142,7 +144,7 @@
 										which are greater than 27 episodes in length.
 									</p>
 									<p>
-										<a class="btn btn-primary" href="#27">Details</a>
+										<a class="btn btn-primary" href="./?page=27">Details</a>
 									</p>
 								</div>
 							</div>
@@ -222,11 +224,26 @@
 				</div>
 			</div>
 		</div>
+		
+		<center><input type="checkbox" name="dark-toggle" data-off-text="Light" data-on-text="Dark"></center>
 	</div>
 
 	<!-- Bootstrap core JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/bootstrap/switch/js/bootstrap-switch.min.js"></script>
+	
+	<!-- Nav bar JavaScript-->
+	<script type="text/javascript">
+		// Bootstrap switch
+		$("[name='dark-toggle']").bootstrapSwitch();
+		
+		// Active tab
+		var url = window.location;
+		$('ul.nav a').filter(function() {
+			return this.href == url;
+		}).parent().addClass('active');
+	</script>
 	
   </body>
 </html>
