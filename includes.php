@@ -1,5 +1,6 @@
 	<!-- Core JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="assets/js/jquery.cookie.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/bootstrap/switch/js/bootstrap-switch.min.js"></script>
 

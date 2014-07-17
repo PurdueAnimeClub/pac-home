@@ -23,6 +23,7 @@
 		?>
 	</div>
 
+	<!-- Content -->
 	<div class="container">
 		<div class="row clearfix">
 			<!-- Page Content -->
