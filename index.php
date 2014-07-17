@@ -173,18 +173,6 @@ Hope to see you there!
 					</h3>
 				</div>
 				<div class="panel-body">
-					<table class="table table-hover table-condensed">
-						<tr>	<th></th>	<th>Show</th>	<th>Episode</th>	</tr>
-						<tr>	<td>1</td>	<td>Log Horizon</td>	<td>-</td>	</tr>
-						<tr>	<td>2</td>	<td>D-Frag!</td>	<td>-</td>	</tr>
-						<tr>	<td>3</td>	<td>Kamisama Kiss</td>	<td>-</td>	</tr>
-						<tr>	<td>4</td>	<td>Kill la Kill</td>	<td>-</td>	</tr>
-						<tr>	<td></td>	<td><i>-Break-</i></td>	<td></td>	</tr>
-						<tr>	<td>5</td>	<td>Kill la Kill</td>	<td>-</td>	</tr>
-						<tr>	<td>6</td>	<td>Free!</td>	<td>-</td>	</tr>
-						<tr>	<td>7</td>	<td>Silver Spoon</td>	<td>-</td>	</tr>
-						<tr>	<td>8</td>	<td>Jojo's Bizarre Adventure</td>	<td>-</td>	</tr>
-					</table>
 				</div>
 				<div class="panel-footer">
 					Thursdays at 7PM
