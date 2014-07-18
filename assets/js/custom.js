@@ -9,8 +9,8 @@ $(document).ready(function(){
 	var themesheet = $('.theme-sheet');
 	var themetoggle = $(".theme-toggle");
 	var themes = {
-		"light": "assets/bootstrap/css/flatly.min.css",
-		"dark" : "assets/bootstrap/css/darkly.min.css",
+		"light": "assets/css/flatly.css",
+		"dark" : "assets/css/darkly.css",
 	}
 
 	// Set the theme
