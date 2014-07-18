@@ -24,7 +24,7 @@
 						PAC Theater
 					</h2>
 					<div class="responsive-video">
-						<iframe src="http://www.youtube.com/embed/kUDs5pOyWkk" frameborder="0" allowfullscreen=""></iframe>
+						<iframe src="http://www.youtube.com/embed/kUDs5pOyWkk?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
 					</div>
 				</div>
 				

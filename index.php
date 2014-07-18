@@ -31,14 +31,14 @@
 				<?php 
 					$page = $_GET['page'];
 					if($page == '') { $page = 'home'; }
-					include 'pages/'.$page.'.php'; 
+					include 'pages/'.$page.'.php';
 				?>
 			</div>
 			
 			<!-- Persistent Sidebar -->
 			<div class="col-md-4 column">
 				<?php 
-					include 'sidebar.php'; 
+					include 'sidebar.php';
 				?>
 			</div>
 		</div>
@@ -48,8 +48,7 @@
 			<input type="checkbox" class="theme-toggle"
 				data-off-text="Light" data-on-text="Dark"
 				data-off-theme="light" data-on-theme="dark">
-		</div>
-		
+		</div>	
 	</div>
   </body>
 </html>
