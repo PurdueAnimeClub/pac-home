@@ -31,7 +31,7 @@
 				<?php 
 					$page = $_GET['page'];
 					if($page == '') { $page = 'home'; }
-					include $page.'.php'; 
+					include 'pages/'.$page.'.php'; 
 				?>
 			</div>
 			
