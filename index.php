@@ -42,14 +42,14 @@
 				?>
 			</div>
 		</div>
-		
-		<!-- Footer -->
-		<div class="footer">
-			<input type="checkbox" class="theme-toggle"
-				data-off-text="Light" data-on-text="Dark"
-				data-off-theme="light" data-on-theme="dark">
-		</div>	
 	</div>
+	
+	<!-- Footer -->
+	<div class="panel-footer">
+		<input type="checkbox" class="theme-toggle"
+			data-off-text="Light" data-on-text="Dark"
+			data-off-theme="light" data-on-theme="dark">
+	</div>	
   </body>
 </html>
 

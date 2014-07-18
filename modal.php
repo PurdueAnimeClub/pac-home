@@ -82,10 +82,16 @@ foreach($data->info as $info) {
 	</div>
 </div>
 <div class="modal-footer">
-	<table class="table">
+	<div class=".container-fluid">
+		<div style="vertical-align:middle" class="row">
+			<div style="text-align:left;" class="col-xs-6">Source: <a target="_blank" href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id=<?php echo $id; ?>">ANN</a></div>
+			<div style="text-align:right" class="col-xs-6"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+		</div>
+	</div>
+	<!--<table class="table">
 	<tr>
 	<td style="text-align:left; vertical-align:middle">Source: <a target="_blank" href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id=<?php echo $id; ?>">ANN</a></td>
 	<td style="text-align:right"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></td>
 	</tr>
-	</table>
+	</table>-->
 </div>
