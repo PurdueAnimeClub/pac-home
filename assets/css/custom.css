@@ -31,3 +31,7 @@ body {
 .label {
 	display: inline-block;
 }
+
+.table tbody tr:hover th {
+  background-color: transparent;
+}
