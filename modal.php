@@ -1,11 +1,12 @@
 <?php
 $id = htmlspecialchars($_GET['id']);
+$name = htmlspecialchars($_GET['name']);
 
 // parse xml from ann
 $data = simplexml_load_file("http://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime=".$id)->anime;
-$mainTitle = "";
+$mainTitle = $name;
 $thumbnail = "";
-$summary = "";
+$summary = "Not available";
 $altTitles = array();
 $genres = array();
 $themes = array();
@@ -36,14 +37,24 @@ foreach($data->info as $info) {
 			<img alt="thumbnail" src="<?php echo $thumbnail; ?>" class="img-thumbnail" />
 			<h4>Genres</h4>
 			<?php
-				for($x = 0; $x < count($genres); $x++) {
-					echo "<span class='label label-default'>".$genres[$x]."</span> ";
+				$count = count($genres);
+				if($count > 0) {
+					for($x = 0; $x < $count; $x++) {
+						echo "<span class='label label-default'>".$genres[$x]."</span> ";
+					}
+				} else {
+					echo "Not available";
 				}
 			?>
 			<h4>Themes</h4>
 			<?php
-				for($x = 0; $x < count($themes); $x++) {
-					echo "<span class='label label-default'>".$themes[$x]."</span> ";
+				$count = count($themes);
+				if($count > 0) {
+					for($x = 0; $x < $count; $x++) {
+						echo "<span class='label label-default'>".$themes[$x]."</span> ";
+					}
+				} else {
+					echo "Not available";
 				}
 			?>
 		</div>
@@ -52,14 +63,21 @@ foreach($data->info as $info) {
 			<p>
 				<?php echo $summary; ?>
 			</p>
-			<h4>Alternate Titles</h4>
-			<ul>
-				<?php
-					for($x = 0; $x < count($altTitles); $x++) {
-						echo "<li>".$altTitles[$x]."</li>";
-					}
-				?>
-			</ul>
+			<?php
+				$count = count($altTitles);
+				if($count > 0) {
+			?>
+					<h4>Alternate Titles</h4>
+					<ul>
+						<?php
+							for($x = 0; $x < $count; $x++) {
+								echo "<li>".$altTitles[$x]."</li>";
+							}
+						?>
+					</ul>
+			<?php
+				}
+			?>
 		</div>
 	</div>
 </div>
