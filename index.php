@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +14,13 @@
   </head>
 
   <body>
-
+	<?php
+		$con = mysqli_connect($db_address,$db_user,$db_password,$db_name);
+		if (mysqli_connect_errno()) {
+			echo "Failed to connect to MySQL: " . mysqli_connect_error();
+		}
+	?>
+	
 	<!-- Navbar -->
 	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<?php 

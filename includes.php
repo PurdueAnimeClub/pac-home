@@ -1,26 +1,31 @@
-	<!-- Core JavaScript -->
-	<script src="assets/js/jquery.js"></script>
-	<script src="assets/js/jquery.cookie.js"></script>
-	<script src="assets/js/bootstrap.js"></script>
-	<script src="assets/js/bootstrap-switch.js"></script>
+<?php
+include 'dbconfig.php';
+include 'getnews.php';
+?>
 
-	<!-- Custom Javascript -->
-	<script src="assets/js/custom.js"></script>
+<!-- Core JavaScript -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/bootstrap-switch.js"></script>
 
-	<!-- Bootstrap CSS (in case JS is disabled) -->
-	<link href="assets/css/flatly.css" rel="stylesheet" class="theme-sheet">
+<!-- Custom Javascript -->
+<script src="assets/js/custom.js"></script>
 
-	<!-- Bootstrap Switch -->
-	<link href="assets/css/bootstrap-switch.css" rel="stylesheet">
+<!-- Bootstrap CSS (in case JS is disabled) -->
+<link href="assets/css/flatly.css" rel="stylesheet" class="theme-sheet">
 
-	<!-- Custom CSS -->
-	<link href="assets/css/custom.css" rel="stylesheet">
+<!-- Bootstrap Switch -->
+<link href="assets/css/bootstrap-switch.css" rel="stylesheet">
 
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom CSS -->
+<link href="assets/css/custom.css" rel="stylesheet">
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	  <script src="assets/js/html5shiv.js"></script>
-	  <script src="assets/js/respond.js"></script>
-	<![endif]-->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.js"></script>
+<![endif]-->
