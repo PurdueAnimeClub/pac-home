@@ -22,7 +22,9 @@
 		}
 	?>
 	<ul class="pager">
-		<li class="previous<?php if($start) echo ' disabled'; ?>"><a href="./?page=news&index=<?php echo $start ? $index : $prevIndex; ?>">&larr; Newer</a></li>
-		<li class="next<?php if($end) echo ' disabled'; ?>"><a href="./?page=news&index=<?php echo $end ? $index : $nextIndex; ?>">Older &rarr;</a></li>
+		<?php
+			if(!$start) echo '<li class="previous"><a href="./?page=news&index='.$prevIndex.'">&larr; Newer</a></li>';
+			if(!$end) echo '<li class="next"><a href="./?page=news&index='.$nextIndex.'">Older &rarr;</a></li>';
+		?>
 	</ul>
 </div>

@@ -8,7 +8,7 @@ function get_news($con, $index) {
 		$author = htmlspecialchars($row['Author']);
 		$content = nl2br(htmlspecialchars($row['Content']));
 		
-		$return = '<p><h4>'.$date.' by '.$author.'</h4></p>'.'<p>'.$content.'</p>';
+		$return = '<p><small>'.$date.' by '.$author.'</small></p>'.'<p>'.$content.'</p>';
 		return $return;
 	} else {
 		return '';
