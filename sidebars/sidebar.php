@@ -101,9 +101,11 @@
 	}
 
 	echo "<h3>".$title."</h3>";
-	display("PAC", $lineupPAC, "Thursdays at 7pm");
-	echo "<hr />";
-	display("PAC Classic", $lineupClassic, "Mondays at 7pm");
-	echo "<hr />";
-	display("PAC 27+", $lineup27, "Wednesdays at 7pm");
+	if($hideLineupPAC && $hideLineupClassic && $hideLineup27) {
+		echo "<p>Nothing here right now.</p>";
+	} else {
+		if(!$hideLineupPAC) display("PAC", $lineupPAC, "Thursdays at 7pm");
+		if(!$hideLineupClassic) display("PAC Classic", $lineupClassic, "Mondays at 7pm");
+		if(!$hideLineup27) display("PAC 27+", $lineup27, "Wednesdays at 7pm");
+	}
 ?>

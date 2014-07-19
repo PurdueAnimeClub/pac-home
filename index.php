@@ -14,13 +14,6 @@
   </head>
 
   <body>
-	<?php
-		$con = mysqli_connect($db_address,$db_user,$db_password,$db_name);
-		if (mysqli_connect_errno()) {
-			echo "Failed to connect to MySQL: " . mysqli_connect_error();
-		}
-	?>
-	
 	<!-- Navbar -->
 	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<?php 
@@ -43,7 +36,8 @@
 			<!-- Persistent Sidebar -->
 			<div class="col-md-4 column">
 				<?php 
-					include 'sidebar.php';
+					if($sidebar == '') { $sidebar = 'sidebar'; }
+					include 'sidebars/'.$sidebar.'.php';
 				?>
 			</div>
 		</div>

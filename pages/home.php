@@ -20,7 +20,7 @@
 <!-- PAC Sub groups -->
 <div class="well">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-sm-4">
 			<div class="thumbnail">
 				<img alt="600x200" src="assets/img/pac-thumbnail.jpg" />
 				<div class="caption">
@@ -38,7 +38,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-sm-4">
 			<div class="thumbnail">
 				<img alt="600x200" src="assets/img/classic-thumbnail.jpg" />
 				<div class="caption">
@@ -56,7 +56,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-sm-4">
 			<div class="thumbnail">
 				<img alt="600x200" src="assets/img/27-thumbnail.jpg" />
 				<div class="caption">
