@@ -4,7 +4,7 @@
 		Announcements
 	</h2>
 	<?php echo get_news($con, 0); ?>
-	<a href="./?page=news"><small>Previous announcements</small></a>
+	<p><small><a href="./?page=news">Previous announcements</a></small></p>
 </div>
 
 <!-- PAC Theater -->
@@ -12,9 +12,28 @@
 	<h2>
 		PAC Theater
 	</h2>
-	<div class="responsive-video">
-		<iframe src="http://www.youtube-nocookie.com/embed/kUDs5pOyWkk?wmode=transparent" frameborder="0" allowfullscreen></iframe>
+	<div id="links">
+		<?php
+			$query = "SELECT * FROM home_theater ORDER BY Rand() ASC";
+			$result = mysqli_query($con, $query);
+			while ($row = mysqli_fetch_array($result)) {
+				$video = $row['Video'];
+				$url = 'http://www.youtube-nocookie.com/embed/'.$video.'?wmode=transparent';
+				$poster = 'http://img.youtube.com/vi/'.$video.'/maxresdefault.jpg';
+				$title = $row['Title'];
+				echo '<a type="text/html" href="'.$url.'" title="'.$title.'" data-poster="'.$poster.'" data-youtube="'.$video.'"></a>';
+			}
+		?>
 	</div>
+	<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
+		<div class="slides"></div>
+		<h3 class="title"></h3>
+		<a class="prev">‹</a>
+		<a class="next">›</a>
+		<a class="play-pause"></a>
+		<ol class="indicator"></ol>
+	</div>
+	<p><small><a href="#">Suggest an AMV</a></small></p>
 </div>
 
 <!-- PAC Sub groups -->
