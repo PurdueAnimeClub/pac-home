@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Purdue Anime Club">
-	<meta name="author" content="PAC">
-	<link rel="icon" href="favicon.ico">
-	<title>Purdue Anime Club</title>
-	<?php 
-		include 'includes.php'; 
+	<?php
+		include 'head.php';
+		include 'init.php'; 
 	?>
   </head>
 
@@ -43,14 +37,10 @@
 		</div>
 	</div>
 	
-	<!-- Footer -->
-	<div class="panel-footer">
-		<input type="checkbox" class="theme-toggle"
-			data-off-text="Light" data-on-text="Dark"
-			data-off-theme="light" data-on-theme="dark">
-	</div>
+	<?php
+		include 'foot.php';
+	?>
 	
-	<script src="//cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.15.1/js/blueimp-gallery.min.js"></script>
   </body>
 </html>
 

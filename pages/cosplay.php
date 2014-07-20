@@ -12,8 +12,7 @@
 	</div>
 	
 	<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
-		<div class="slides">
-		</div>
+		<div class="slides"></div>
 		<h3 class="title"></h3>
 		<a class="prev">‹</a>
 		<a class="next">›</a>
