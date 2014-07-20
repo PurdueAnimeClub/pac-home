@@ -48,7 +48,9 @@
 		<input type="checkbox" class="theme-toggle"
 			data-off-text="Light" data-on-text="Dark"
 			data-off-theme="light" data-on-theme="dark">
-	</div>	
+	</div>
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.15.1/js/blueimp-gallery.min.js"></script>
   </body>
 </html>
 

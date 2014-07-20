@@ -35,4 +35,22 @@ $(document).ready(function(){
 			$.removeCookie('switchon');
 		setTheme($(this).attr(state ? 'data-on-theme' : 'data-off-theme'));
 	});
+	
+	// Blueimp
+	blueimp.Gallery(
+		document.getElementById('links').getElementsByTagName('a'),
+		{
+			container: '#blueimp-gallery',
+			carousel: true
+		}
+	);
+	
+	document.getElementById('links').onclick = function (event) {
+		event = event || window.event;
+		var target = event.target || event.srcElement,
+			link = target.src ? target.parentNode : target,
+			options = {index: link, event: event},
+			links = this.getElementsByTagName('a');
+		blueimp.Gallery(links, options);
+	};
 });

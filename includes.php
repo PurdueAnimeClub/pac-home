@@ -15,14 +15,14 @@ include 'config.php';
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/bootstrap-switch.js"></script>
 
+
 <!-- Custom Javascript -->
 <script src="assets/js/custom.js"></script>
 
-<!-- Bootstrap CSS (in case JS is disabled) -->
+<!-- Core CSS -->
 <link href="assets/css/flatly.css" rel="stylesheet" class="theme-sheet">
-
-<!-- Bootstrap Switch -->
 <link href="assets/css/bootstrap-switch.css" rel="stylesheet">
+<link href="//cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.15.1/css/blueimp-gallery.min.css" rel="stylesheet">
 
 <!-- Custom CSS -->
 <link href="assets/css/custom.css" rel="stylesheet">
