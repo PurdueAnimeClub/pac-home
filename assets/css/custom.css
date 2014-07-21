@@ -35,3 +35,7 @@ body {
 .table tbody tr:hover th {
   background-color: transparent;
 }
+
+.blueimp-gallery .title {
+	background-color:rgba(0,0,0,0.33);;
+}
