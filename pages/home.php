@@ -14,7 +14,7 @@
 	</h2>
 	<div id="links">
 		<?php
-			$query = "SELECT * FROM home_theater ORDER BY Rand() ASC";
+			$query = "SELECT * FROM home_theater WHERE Status='live' ORDER BY Rand() ASC";
 			$result = mysqli_query($con, $query);
 			while ($row = mysqli_fetch_array($result)) {
 				$video = $row['Video'];
@@ -33,7 +33,51 @@
 		<a class="play-pause"></a>
 		<ol class="indicator"></ol>
 	</div>
-	<p><small><a href="#">Suggest an AMV</a></small></p>
+	<p><small><a href="#" data-toggle="modal" data-target="#suggestionModal">Suggest an AMV</a></small></p>
+				
+	<!-- Suggestion Modal -->
+	<div class="modal fade" id="suggestionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="myModalLabel">AMV Suggestion</h4>
+				</div>
+				<form method="GET" action="submitamv.php" data-parsley-validate role="form" id="amvsuggestform">
+					<div id="suggestion-body" class="modal-body controls control-group">
+						<input data-parsley-required data-parsley-remote="validateyoutube.php" data-parsley-error-message="That isn't a valid YouTube video id." type="text" class="form-control" id="id" name="id" placeholder="YouTube video ID">
+					</div>
+					<div class="modal-footer controls">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(function() {
+			  $('#amvsuggestform').submit(function(event) {
+				var form = $(this);
+				$.ajax({
+				  type: form.attr('method'),
+				  url: form.attr('action'),
+				  data: form.serialize()
+				}).done(function() {
+				  $('#amvsuggestform').trigger('reset');
+				  $('#suggestionModal').modal('hide')
+				  bootbox.alert("Submitted.");
+				}).fail(function(data) {
+				  $('#amvsuggestform').trigger('reset');
+				  $('#suggestionModal').modal('hide')
+				  bootbox.alert(data['responseText']);
+				});
+				event.preventDefault();
+			  });
+			});
+		});
+	</script>
 </div>
 
 <!-- PAC Sub groups -->

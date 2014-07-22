@@ -7,10 +7,14 @@
 <title>Purdue Anime Club</title>
 
 <!-- CSS -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="assets/css/flatly.css" rel="stylesheet" class="theme-sheet">
 <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.0.2/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet">
 <link href="//cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.15.1/css/blueimp-gallery.min.css" rel="stylesheet">
 <link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- JQuery -->
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
