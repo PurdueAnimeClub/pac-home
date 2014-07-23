@@ -1,7 +1,7 @@
 <!-- Footer -->
 <div class="footer">
 	<p><small><a href="./?page=admin">Admin Panel</a></small></p>
-	<p><a target="_blank" href="https://www.facebook.com/groups/5554723335/">Facebook</a> | <a target="_blank" href="https://boilerlink.purdue.edu/organization/purdueanimeclub">BoilerLink</a> | <a href="./?page=constitution">Constitution</a></p>
+	<p><a target="_blank" href="https://www.facebook.com/groups/5554723335/">Facebook</a> | <a target="_blank" href="https://boilerlink.purdue.edu/organization/purdueanimeclub">BoilerLink</a> | <a target="_blank" href="http://docs.google.com/viewer?url=https%3A%2F%2Fboilerlink.purdue.edu%2Forganization%2Fpurdueanimeclub%2FDocumentLibrary%2FView%2F53568">Constitution</a></p>
 	<input type="checkbox" class="theme-toggle"
 		data-off-text="Light" data-on-text="Dark"
 		data-off-theme="light" data-on-theme="dark">
