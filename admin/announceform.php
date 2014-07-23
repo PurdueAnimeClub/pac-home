@@ -2,7 +2,7 @@
 	<input name="key" id="key" type="hidden" value="<?php echo $key; ?>"/>
 	<input class="form-control" data-parsley-required maxlength=64 name="title" id="title" type="text" placeholder="Title" />
 	<textarea class="form-control" data-parsley-required maxlength=65535 name="announcement" id="announcement" placeholder="Announcement" rows="10"></textarea>
-	<button type="submit" class="btn btn-primary">Announce!</button>
+	<button type="submit" class="btn btn-primary"><i class="fa fa-comment"></i> Announce!</button>
 </form>
 <script type="text/javascript">
 	$(document).ready(function(){
