@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Purdue Anime Club">
 <meta name="author" content="PAC">
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="assets/img/favicon.ico">
 <title>Purdue Anime Club</title>
 
 <!-- rot13 -->
