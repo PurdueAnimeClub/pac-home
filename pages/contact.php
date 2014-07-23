@@ -1,10 +1,9 @@
 <h2>Contact Information</h2>
 <div class="well">
-	<div id="email">
-		<table id="contacts" class="table table-hover">
-			<tr><th>Position</th><th>Name</th><th>Contact</th></tr>
-		</table>
-	</div>
+	<table class="table table-responsive-npr">
+		<thead><tr><th>Position</th><th>Name</th><th>Contact</th></tr></thead>
+		<tbody id="contacts"></tbody>
+	</table>
 
 	<script type="text/javascript">
 		var elements = [
@@ -21,7 +20,7 @@
 			var position = elements[i][0];
 			var name = elements[i][1];
 			var contact = rot13(elements[i][2]);
-			var html = '<tr href="mailto:'+contact+'?subject=PAC" class="clickable show-hand"><td>'+position+'</td><td>'+name+'</td><td>'+contact+'</td></tr>';
+			var html = '<tr><td data-title="Position">'+position+'</td><td data-title="Name">'+name+'</td><td data-title="Contact"><a href="mailto:'+contact+'?subject=PAC">'+contact+'</a></td></tr>';
 			$("#contacts").append(html);
 		}
 	</script>

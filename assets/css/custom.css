@@ -90,3 +90,49 @@ textarea.parsley-error {
 .form-control, input, textarea {
     border: 1px solid;
 }
+
+/* responsive table */
+@media screen and (max-width: 480px) {
+	table.table-responsive-npr,
+    table.table-responsive-npr tbody {
+        display: block;
+        width: 100%:
+    }
+    
+    table.table-responsive-npr thead { display: none; }
+    
+    table.table-responsive-npr tr,
+    table.table-responsive-npr th,
+    table.table-responsive-npr td {
+        display: block;
+        padding: 0;
+        text-align: left;
+        white-space: normal;
+    }
+    
+    table.table-responsive-npr tr {
+        border-bottom: 2px solid rgba(127, 127, 127, .4);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    
+    table.table-responsive-npr th[data-title]:before,
+    table.table-responsive-npr td[data-title]:before {
+        content: attr(data-title) ":\00A0";
+        font-weight: bold;
+    }
+    
+    table.table-responsive-npr td {
+        border: none;
+        margin-bottom: 6px;
+    }
+    
+    table.table-responsive-npr td:empty { display: none; }
+    
+    table.table-responsive-npr td:first-child {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+    table.table-responsive-npr td:first-child:before { content: ''; }
+}

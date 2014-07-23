@@ -58,7 +58,7 @@
 						if($count > 0) {
 					?>
 							<table class="table table-hover table-condensed">
-								<tr><th></th><th>Show</th><th>Episode</th></tr>
+								<thead><tr><th></th><th>Show</th><th>Episode</th></tr></thead><tbody>
 									<?php
 										for ($x=0; $x<$count; $x++) {
 											if($slot = $lineup[$x] == NULL) {
@@ -69,7 +69,7 @@
 											$id = $lineup[$x]['id'];
 											$name = $lineup[$x]['name'];
 											$episode = $lineup[$x]['episode'];
-											echo '<tr data-target="#infoModal'.$id.'" data-toggle="modal" href="./modal.php?id='.$id.'&name='.str_replace(' ', '+', $name).'" class="show-hand"><td>'.$slot.'</td><td>'.$name.'</td><td>'.$episode.'</td></tr>';
+											echo '<tr data-target="#infoModal'.$id.'" data-toggle="modal" href="./modal.php?id='.$id.'&name='.str_replace(' ', '+', $name).'" class="show-hand"><td>'.$slot.'</td><td>'.$name.'</td><td>'.$episode.'</td><td><span class="glyphicon glyphicon-info-sign"></span></td></tr>';
 											?>
 											<div class="modal fade" id="infoModal<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel<?php echo $id; ?>" aria-hidden="true">
 												<div class="modal-dialog">
@@ -80,7 +80,7 @@
 														</div>
 														<div class="modal-body">Loading...</div>
 														<div class="modal-footer">
-															<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+															<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Close</button>
 														</div>
 													</div>
 												</div>
@@ -88,10 +88,10 @@
 											<?php
 										}
 									?>
-							</table>
+							</tbody></table>
 					<?php } ?>
 				</div>
-				<div class="panel-footer"><?php echo $foot; ?></div>
+				<div class="panel-footer" style="text-align: center"><?php echo $foot; ?></div>
 			</div>
 		<?php
 	}

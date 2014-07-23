@@ -48,8 +48,8 @@
 						<input data-parsley-required data-parsley-remote="validateyoutube.php" data-parsley-error-message="That isn't a valid YouTube video id." type="text" class="form-control" id="id" name="id" placeholder="YouTube video ID">
 					</div>
 					<div class="modal-footer controls">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+						<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Submit</button>
 					</div>
 				</form>
 			</div>
