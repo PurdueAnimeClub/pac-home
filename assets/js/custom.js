@@ -1,11 +1,9 @@
 $(document).ready(function(){
-	// Set active tab and hide navbar
+	// Set active tab
 	var url = window.location;
 	$('ul.nav a').filter(function() {
 		return this.href == url;
 	}).parent().addClass('active');
-	$("div.navbar-fixed-top").autoHidingNavbar();
-	$("div.navbar-fixed-top").autoHidingNavbar('setShowOnBottom', false);
 
 	// Themes vars
 	var themesheet = $('.theme-sheet');
