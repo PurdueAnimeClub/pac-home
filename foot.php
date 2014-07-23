@@ -1,8 +1,11 @@
 <!-- Footer -->
-<div class="panel-footer">
+<div class="footer">
+	<p><small><a href="./?page=admin">Admin Panel</a></small></p>
+	<p><a target="_blank" href="https://www.facebook.com/groups/5554723335/">Facebook</a> | <a target="_blank" href="https://boilerlink.purdue.edu/organization/purdueanimeclub">BoilerLink</a></p>
 	<input type="checkbox" class="theme-toggle"
 		data-off-text="Light" data-on-text="Dark"
 		data-off-theme="light" data-on-theme="dark">
+	<br />
 </div>
 
 <!-- JavaScript -->
