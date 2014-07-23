@@ -47,4 +47,9 @@ $(document).ready(function(){
 			}
 		);
 	}
+	
+	// Activate .clickable elements
+	$(".clickable").click(function() {
+		window.document.location = $(this).attr("href");
+	});
 });

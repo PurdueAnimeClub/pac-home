@@ -69,7 +69,7 @@
 											$id = $lineup[$x]['id'];
 											$name = $lineup[$x]['name'];
 											$episode = $lineup[$x]['episode'];
-											echo '<tr data-target="#infoModal'.$id.'" data-toggle="modal" href="./modal.php?id='.$id.'&name='.str_replace(' ', '+', $name).'" class="anime"><td>'.$slot.'</td><td>'.$name.'</td><td>'.$episode.'</td></tr>';
+											echo '<tr data-target="#infoModal'.$id.'" data-toggle="modal" href="./modal.php?id='.$id.'&name='.str_replace(' ', '+', $name).'" class="show-hand"><td>'.$slot.'</td><td>'.$name.'</td><td>'.$episode.'</td></tr>';
 											?>
 											<div class="modal fade" id="infoModal<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel<?php echo $id; ?>" aria-hidden="true">
 												<div class="modal-dialog">
@@ -78,9 +78,7 @@
 															<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 															<h4 class="modal-title" id="infoModalLabel<?php echo $id; ?>">Loading...</h4>
 														</div>
-														<div class="modal-body">
-															Loading...
-														</div>
+														<div class="modal-body">Loading...</div>
 														<div class="modal-footer">
 															<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 														</div>
@@ -93,9 +91,7 @@
 							</table>
 					<?php } ?>
 				</div>
-				<div class="panel-footer">
-					<?php echo $foot; ?>
-				</div>
+				<div class="panel-footer"><?php echo $foot; ?></div>
 			</div>
 		<?php
 	}

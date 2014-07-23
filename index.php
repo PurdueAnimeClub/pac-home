@@ -1,3 +1,9 @@
+<?php 
+	function rmspace($buffer){ 
+		return preg_replace('~>\s*\n\s*<~', '><', $buffer); 
+	};
+	ob_start("rmspace");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,4 +49,4 @@
 	
   </body>
 </html>
-
+<?php ob_end_flush(); ?>

@@ -6,6 +6,20 @@
 <link rel="icon" href="favicon.ico">
 <title>Purdue Anime Club</title>
 
+<!-- rot13 -->
+<script type="text/javascript">
+function rot13(s)
+{
+	return (s ? s : this).split('').map(function(_)
+	{
+		if (!_.match(/[A-za-z]/)) return _;
+		c = Math.floor(_.charCodeAt(0) / 97);
+		k = (_.toLowerCase().charCodeAt(0) - 83) % 26 || 26;
+		return String.fromCharCode(k + ((c == 0) ? 64 : 96));
+	}).join('');
+}
+</script>
+
 <!-- CSS -->
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="assets/css/flatly.css" rel="stylesheet" class="theme-sheet">
