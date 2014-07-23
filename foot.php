@@ -16,4 +16,5 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.2/parsley.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.2/parsley.remote.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.2.0/bootbox.min.js"></script>
+<script src="assets/js/jquery.bootstrap-autohidingnavbar.min.js"></script>
 <script src="assets/js/custom.js"></script>
