@@ -58,18 +58,18 @@
 						if($count > 0) {
 					?>
 							<table class="table table-hover table-condensed">
-								<thead><tr><th></th><th>Show</th><th>Episode</th></tr></thead><tbody>
+								<thead><tr><th></th><th></th><th>Show</th><th>Episode</th></tr></thead><tbody>
 									<?php
 										for ($x=0; $x<$count; $x++) {
 											if($slot = $lineup[$x] == NULL) {
-												echo '<tr><td></td><td><small>-Break-</small></td><td></td></tr>';
+												echo '<tr><td></td><td></td><td><small>-Break-</small></td></tr>';
 												continue;
 											}
 											$slot = $lineup[$x]['slot'];
 											$id = $lineup[$x]['id'];
 											$name = $lineup[$x]['name'];
 											$episode = $lineup[$x]['episode'];
-											echo '<tr data-target="#infoModal'.$id.'" data-toggle="modal" href="./modal.php?id='.$id.'&name='.str_replace(' ', '+', $name).'" class="show-hand"><td>'.$slot.'</td><td>'.$name.'</td><td>'.$episode.'</td><td><span class="glyphicon glyphicon-info-sign"></span></td></tr>';
+											echo '<tr data-target="#infoModal'.$id.'" data-toggle="modal" href="./modal.php?id='.$id.'&name='.str_replace(' ', '+', $name).'" class="show-hand"><td><i class="fa fa-info-circle"></i></td><td>'.$slot.'</td><td>'.$name.'</td><td>'.$episode.'</td></tr>';
 											?>
 											<div class="modal fade" id="infoModal<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel<?php echo $id; ?>" aria-hidden="true">
 												<div class="modal-dialog">
@@ -78,9 +78,9 @@
 															<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 															<h4 class="modal-title" id="infoModalLabel<?php echo $id; ?>">Loading...</h4>
 														</div>
-														<div class="modal-body">Loading...</div>
+														<div class="modal-body"><h1><i class="fa fa-circle-o-notch fa-spin"></i></h1></div>
 														<div class="modal-footer">
-															<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Close</button>
+															<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-check"></i> Close</button>
 														</div>
 													</div>
 												</div>

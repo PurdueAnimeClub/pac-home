@@ -85,7 +85,7 @@ foreach($data->info as $info) {
 	<div class=".container-fluid">
 		<div style="vertical-align:middle" class="row">
 			<div style="text-align:left;" class="col-xs-6">Source: <a target="_blank" href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id=<?php echo $id; ?>">ANN</a></div>
-			<div style="text-align:right" class="col-xs-6"><button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Close</button></div>
+			<div style="text-align:right" class="col-xs-6"><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-check"></i> Close</button></div>
 		</div>
 	</div>
 </div>

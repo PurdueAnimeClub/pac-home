@@ -20,7 +20,7 @@
 			var position = elements[i][0];
 			var name = elements[i][1];
 			var contact = rot13(elements[i][2]);
-			var html = '<tr><td data-title="Position">'+position+'</td><td data-title="Name">'+name+'</td><td data-title="Contact"><a href="mailto:'+contact+'?subject=PAC">'+contact+'</a></td></tr>';
+			var html = '<tr><td>'+position+'</td><td>'+name+'</td><td><i class="fa fa-envelope"></i> <a href="mailto:'+contact+'?subject=PAC">'+contact+'</a></td></tr>';
 			$("#contacts").append(html);
 		}
 	</script>

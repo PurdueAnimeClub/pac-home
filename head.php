@@ -25,6 +25,7 @@ function rot13(s)
 <link href="assets/css/flatly.css" rel="stylesheet" class="theme-sheet">
 <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.0.2/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet">
 <link href="//cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.15.1/css/blueimp-gallery.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="assets/css/custom.css" rel="stylesheet">
 
 <!-- JQuery -->
