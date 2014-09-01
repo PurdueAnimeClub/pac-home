@@ -1,5 +1,6 @@
 ### Project specific
 dbconfig.php
+assets/lineup/
 
 ### OS X
 .DS_Store
