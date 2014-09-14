@@ -2,46 +2,22 @@
 	ini_set('display_errors', 1);
 	error_reporting(~0);
 
-	// Paths
-	$root = "assets/lineup/";
-	$pathTitle = $root."title";
-	$pathPAC = $root."pac";
-	$pathClassic = $root."classic";
-	$path27 = $root."27";
-
 	// Get title
-	$file = fopen($pathTitle, "r") or die("An error occured!");
-	$title = fread($file, filesize($pathTitle));
-	fclose($file);
+	$title = $lineupTitle;
 	
 	// Load lineups for the three groups
-	function load($path) {
-		$result = Array();
-		$file = fopen($path, "r") or die("An error occured!");
-		$slot = 0;
-		$index = 0;
-		while(!feof($file)) {
-			$line = rtrim(fgets($file), "\n");
-			$show = NULL;
-			
-			if(strlen($line) > 0) {
-				$split = explode('	', $line);
-				
-				$show = Array();
-				$show['slot'] = "".(++$slot);
-				$show['id'] = $split[0];
-				$show['episode'] = $split[1];
-				$show['name'] = $split[2];
-			}
-			
-			if(!feof($file)) $result[$index++] = $show;
+	function load($club) {
+		global $con;
+		$return = Array();
+		$result = $con -> query("SELECT * FROM home_lineup WHERE Club='".$club."' ORDER BY Slot ASC");
+		while ($row = $result -> fetch_array()) {
+			array_push($return, $row);
 		}
-		fclose($file);
-		return $result;
+		return $return;
 	}
-	$lineupPAC = load($pathPAC);
-	$lineupClassic = load($pathClassic);
-	$lineup27 = load($path27);
+	$lineupPAC = load("pac");
+	$lineupClassic = load("classic");
+	$lineup27 = load("27");
 	
 	// Display lineups
 	function display($head, $lineup, $foot) {
@@ -60,15 +36,16 @@
 							<table class="table table-hover table-condensed">
 								<thead><tr><th></th><th></th><th>Show</th><th>Episode</th></tr></thead><tbody>
 									<?php
+										$realSlot = 1;
 										for ($x=0; $x<$count; $x++) {
-											if($slot = $lineup[$x] == NULL) {
+											if($lineup[$x]['ANN_ID'] < 0) {
 												echo '<tr><td></td><td></td><td><small>-Break-</small></td></tr>';
 												continue;
 											}
-											$slot = $lineup[$x]['slot'];
-											$id = $lineup[$x]['id'];
-											$name = $lineup[$x]['name'];
-											$episode = $lineup[$x]['episode'];
+											$slot = $realSlot++;
+											$id = $lineup[$x]['ANN_ID'];
+											$name = $lineup[$x]['Name'];
+											$episode = $lineup[$x]['Episode'];
 											echo '<tr data-target="#infoModal'.$id.'" data-toggle="modal" href="./modal.php?id='.$id.'&name='.str_replace(' ', '+', $name).'" class="show-hand"><td><i class="fa fa-info-circle"></i></td><td>'.$slot.'</td><td>'.$name.'</td><td>'.$episode.'</td></tr>';
 											?>
 											<div class="modal fade" id="infoModal<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel<?php echo $id; ?>" aria-hidden="true">
